@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+    .hero-3d {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <canvas id="hero-canvas" class="hero-3d"></canvas>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span></span>
+            Best Pediatric Dentist in Bilaspur
+        </div>
+        <h1 class="hero-title">
+            <span class="title-main">Little Giggles</span>
+            <span class="title-sub">Dental Clinic</span>
+        </h1>
+        <p class="hero-subtitle">Making little smiles sparkle with gentle care!</p>
+        <p class="hero-tagline">Dr. Shivani Dubey - Expert pediatric dentistry for your little ones</p>
+        <div class="hero-buttons">
+            <a href="/contact" class="btn-primary">Book Appointment</a>
+            <a href="/services" class="btn-secondary">Our Services</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🦷</div>
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Happy Kids</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👨‍⚕️</div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Awards</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">Gentle Care for Little Smiles</h2>
+            <p class="section-subtitle">We create a fun, comfortable environment where children feel safe and excited about dental visits.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎈</div>
+                <h3>Fun Environment</h3>
+                <p>Colorful, child-friendly clinic with games and entertainment to make dental visits enjoyable.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💉</div>
+                <h3>Painless Treatments</h3>
+                <p>Advanced techniques and gentle approaches to ensure stress-free, comfortable procedures.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍⚕️</div>
+                <h3>Expert Pediatric Dentist</h3>
+                <p>Dr. Shivani Dubey specializes in children's dental health with years of experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <div class="about-image">
+                    <img src="https://instagram.fpnq14-1.fna.fbcdn.net/v/t51.82787-19/640389538_18410623252121943_2981381923140626738_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fpnq14-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QHNPfgnKuIDYtuHnWGZRCGd8C4g50EG9u1ciHkweZuNbd1Bhg8TbmHF5Od_HFyAxnHGQCvgpBhODSsOdKuGYXnV&_nc_ohc=Jhph8_gYDwMQ7kNvwFDhfpY&_nc_gid=3g3qmzML8Nh3ThceqBPq7A&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_Afy7B2UVqT4EePcXCa7d_yzhTOwrY0HuNWi_FjQrja1jYQ&oe=69BD5D63&_nc_sid=7d3ac5" alt="Dr. Shivani Dubey">
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🦷</div>
+                    <h4>10+ Years</h4>
+                    <p>of Excellence</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">About Us</span>
+                <h2>Welcome to <span>Little Giggles</span></h2>
+                <p>At Little Giggles Dental Clinic, we believe every child deserves a healthy, beautiful smile. Our mission is to provide exceptional pediatric dental care in a warm, welcoming environment where children feel comfortable and parents feel confident.</p>
+                <p>Dr. Shivani Dubey leads our team with compassion, expertise, and a gentle touch that puts children at ease. We use the latest technology and techniques to ensure the best possible care for your little ones.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Modern Equipment</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Safe Materials</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Friendly Staff</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Flexible Hours</span>
+                    </div>
+                </div>
+                <a href="/about" class="btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Services</span>
+            <h2 class="section-title">Complete Dental Care for Kids</h2>
+            <p class="section-subtitle">From routine checkups to specialized treatments, we cover all your child's dental needs.</p>
+        </div>
+        <div class="services-showcase">
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3>General Checkup</h3>
+                <p>Regular dental examinations to monitor oral health and detect issues early.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Teeth Cleaning</h3>
+                <p>Professional cleaning to remove plaque and keep smiles bright and healthy.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Fluoride Treatment</h3>
+                <p>Protective treatments to strengthen enamel and prevent cavities.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Dental Fillings</h3>
+                <p>Tooth-colored fillings that restore function and appearance naturally.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👶</div>
+                <h3>Pediatric Care</h3>
+                <p>Specialized care for infants, toddlers, and teenagers.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>Emergency Care</h3>
+                <p>Same-day appointments for dental emergencies and urgent care.</p>
+                <a href="/services" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="middle-3d-section">
+    <canvas id="middle-canvas" class="section-canvas"></canvas>
+    <div class="middle-content">
+        <h2>Your Child's Smile is Our Priority</h2>
+        <p>Making dental visits fun and comfortable for kids</p>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Clinic</span>
+            <h2 class="section-title">A Peek Inside Our World</h2>
+            <p class="section-subtitle">Explore our child-friendly environment designed to make dental visits fun!</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepoAbdY2Eal_nFRLJQKRW5tAl81M2F46tS7MDx9P2KcL2P-37Y0qvX3LDaPMqFR-87_gJ8lamkZZ2q7eW3EO_-aQO2dJSLwb7VgHeyXnG4fuPNmqBLRQW-3C76hG-DoitcWVvt-vPaMmGY=s1360-w1360-h1020" alt="Clinic">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweruegaSbl7_kKjBe7-8sv0RgYRCVtksd9C_tth-Q8-967cgZJ_p3NvHyK9dRCGyrmEO8yqkiwNMMWt2HfmG7Wed-5kC8rJqvNg6gxE2hGRvzQfxKD28h0Xbp6BetWyMEvu_V0AZPQ1Oq7Q=s1360-w1360-h1020" alt="Clinic">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqVIj3L5v7sTIt6JUBnfQgezvdhIkVgM-Z1g0MmTzMuO08CA6Nnkja9AvHgJ8I5zYEd-wwh0PkA_xBNKn1PeJjdqgsKSi54QitpQEwnJOtTODmnKZgT1HT_n6EZk6kweEq1Y1Ra2VqQALBN=s1360-w1360-h1020" alt="Clinic">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerFtve2k6VayBV9agXLPbj6o63voKiHYq1bB0PiqJAjw4xG7O5HzYfTp_hNfbcH3itooxjqM_YPHXn4L4LmsA9kKGSzDSk-m1GM898i_GX_mcfDQNQ58GVLuYBiQI92Hq411noTVacyU5A=s1360-w1360-h1020" alt="Clinic">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNhXL797nJOWwPWqEQ6qzaSDbcGop0m1ATEJXOk=s1360-w1360-h1020" alt="Clinic">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What Parents Say</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Wonderful experience! My daughter used to fear dentists, but now she actually looks forward to her visits. Dr. Shivani is amazing with kids!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Best pediatric dentist in Bilaspur! The clinic is beautiful and child-friendly. The staff is very patient and caring."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨</div>
+                    <div class="testimonial-info">
+                        <h4>Rajesh Patel</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Thank you Dr. Shivani for making my son's first dental visit so smooth! Truly exceptional with children."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Anita Verma</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <canvas id="footer-canvas" class="cta-canvas"></canvas>
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Give Your Child a Beautiful Smile?</h2>
+            <p>Book an appointment today and let us take care of your child's dental health!</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn-primary">Book Appointment Now</a>
+                <a href="/contact" class="btn-secondary">Call Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

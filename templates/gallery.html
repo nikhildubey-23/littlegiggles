@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery - Little Giggles Dental Clinic{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <canvas id="page-canvas" class="hero-3d"></canvas>
+    <div class="page-hero-content">
+        <h1>Our Gallery</h1>
+        <p>Take a virtual tour of our child-friendly clinic</p>
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/gallery">Gallery</a>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Clinic</span>
+            <h2 class="section-title">Welcome to Little Giggles</h2>
+            <p class="section-subtitle">Explore our beautiful, child-friendly dental clinic designed to make kids feel comfortable and excited about dental care.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepoAbdY2Eal_nFRLJQKRW5tAl81M2F46tS7MDx9P2KcL2P-37Y0qvX3LDaPMqFR-87_gJ8lamkZZ2q7eW3EO_-aQO2dJSLwb7VgHeyXnG4fuPNmqBLRQW-3C76hG-DoitcWVvt-vPaMmGY=s1360-w1360-h1020" alt="Reception Area">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweruegaSbl7_kKjBe7-8sv0RgYRCVtksd9C_tth-Q8-967cgZJ_p3NvHyK9dRCGyrmEO8yqkiwNMMWt2HfmG7Wed-5kC8rJqvNg6gxE2hGRvzQfxKD28h0Xbp6BetWyMEvu_V0AZPQ1Oq7Q=s1360-w1360-h1020" alt="Treatment Room">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqVIj3L5v7sTIt6JUBnfQgezvdhIkVgM-Z1g0MmTzMuO08CA6Nnkja9AvHgJ8I5zYEd-wwh0PkA_xBNKn1PeJjdqgsKSi54QitpQEwnJOtTODmnKZgT1HT_n6EZk6kweEq1Y1Ra2VqQALBN=s1360-w1360-h1020" alt="Kids Play Area">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerFtve2k6VayBV9agXLPbj6o63voKiHYq1bB0PiqJAjw4xG7O5HzYfTp_hNfbcH3itooxjqM_YPHXn4L4LmsA9kKGSzDSk-m1GM898i_GX_mcfDQNQ58GVLuYBiQI92Hq411noTVacyU5A=s1360-w1360-h1020" alt="Modern Equipment">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNhXL797nJOWwPWqEQ6qzaSDbcGop0m1ATEJXOk=s1360-w1360-h1020" alt="Our Clinic">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What Parents Say</h2>
+            <p class="section-subtitle">Hear from happy parents whose children love visiting Little Giggles.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Wonderful experience! My daughter used to fear dentists, but now she actually looks forward to her visits. Dr. Shivani is amazing with kids!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Best pediatric dentist in Bilaspur! The clinic is beautiful and child-friendly. The staff is very patient and caring."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨</div>
+                    <div class="testimonial-info">
+                        <h4>Rajesh Patel</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Thank you Dr. Shivani for making my son's first dental visit so smooth! Truly exceptional with children."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Anita Verma</h4>
+                        <p>Happy Parent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    });
+</script>
+{% endblock %}

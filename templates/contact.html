@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Little Giggles Dental Clinic{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <canvas id="page-canvas" class="hero-3d"></canvas>
+    <div class="page-hero-content">
+        <h1>Contact Us</h1>
+        <p>Book your appointment today</p>
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <h3>Get in Touch</h3>
+                <p>We're here to help! Reach out to us for any queries or to book an appointment.</p>
+                
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Address</h4>
+                            <p>Vidya Nagar Rd, Bilaspur, Vidya Nagar, Chhattisgarh 495001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Email</h4>
+                            <p>info@littlegiggles.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hours-card">
+                    <h4><i class="fas fa-clock"></i> Business Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="day">Monday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Tuesday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Wednesday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Thursday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Friday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">11:00 AM - 4:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3>Book an Appointment</h3>
+                <p>Fill out the form below and we'll get back to you soon!</p>
+                <form id="appointmentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Parent's Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="childName">Child's Name</label>
+                            <input type="text" id="childName" name="childName" required placeholder="Enter child's name">
+                        </div>
+                        <div class="form-group">
+                            <label for="childAge">Child's Age</label>
+                            <input type="number" id="childAge" name="childAge" required placeholder="Enter child's age" min="0" max="18">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="checkup">General Checkup</option>
+                            <option value="cleaning">Teeth Cleaning</option>
+                            <option value="filling">Dental Filling</option>
+                            <option value="extraction">Tooth Extraction</option>
+                            <option value="fluoride">Fluoride Treatment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group full">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any additional information..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for booking an appointment! We will contact you shortly.');
+        this.reset();
+    });
+
+    const dateInput = document.getElementById('date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+</script>
+{% endblock %}
